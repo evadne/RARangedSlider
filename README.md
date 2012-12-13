@@ -19,7 +19,7 @@ Drop the control into your project as a static library, and drop the bundle cont
 
 ## Licensing
 
-This project is in the public domain.  You can use it and embed it in whatever application you sell, and you can use it for evil.  However, it is appreciated if you provide attribution, by linking to the project page ([https://github.com/evadne/RAContentStretchingView](https://github.com/evadne/RARangedSlider)) from your application.
+This project is in the public domain.  You can use it and embed it in whatever application you sell, and you can use it for evil.  However, it is appreciated if you provide attribution, by linking to the project page ([https://github.com/evadne/RARangedSlider](https://github.com/evadne/RARangedSlider)) from your application.
 
 
 ## Credits
