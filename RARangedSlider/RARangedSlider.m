@@ -179,10 +179,20 @@ extern NSString * SPStringFromUIControlState (UIControlState state);
 
 }
 
+- (BOOL) pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+
+	BOOL superAnswer = [super pointInside:point withEvent:event];
+	if (superAnswer)
+		return superAnswer;
+	
+	return !![self thumbForTouchAtPoint:point];
+	
+}
+
 - (BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
 
 	UIView *hitThumbView = [self thumbForTouchAtPoint:[touch locationInView:self]];
-		
+	
 	if (hitThumbView) {
 	
 		self.trackedThumbView = hitThumbView;
