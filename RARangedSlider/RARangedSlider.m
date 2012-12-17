@@ -327,9 +327,12 @@ extern NSString * SPStringFromUIControlState (UIControlState state);
 
 - (CGRect) thumbRectForBounds:(CGRect)bounds trackRect:(CGRect)rect value:(float)value  active:(BOOL)active {
 	
+	CGFloat trackWidth = (CGRectGetMaxX(rect) - CGRectGetMinX(rect));
+	CGFloat valueSpan = self.maxValue - self.minValue;
+	CGFloat valueDelta = value - self.minValue;
+	
 	CGPoint thumbCenter = (CGPoint) {
-		(((CGRectGetMaxX(rect) - CGRectGetMinX(rect)) / (self.maxValue - self.minValue)) *
-			((value - self.minValue) / (self.maxValue - self.minValue))),
+		(trackWidth / valueSpan) * valueDelta,
 		roundf(CGRectGetMidY(rect))
 	};
 	
