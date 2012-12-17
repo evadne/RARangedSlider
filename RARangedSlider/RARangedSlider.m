@@ -12,12 +12,6 @@ extern NSString * SPStringFromUIControlState (UIControlState state);
 
 @interface RARangedSlider () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, readwrite, assign) float minValue;
-@property (nonatomic, readwrite, assign) float maxValue;
-
-@property (nonatomic, readwrite, assign) float lowValue;
-@property (nonatomic, readwrite, assign) float highValue;
-
 @property (nonatomic, readonly, strong) UIImageView *backgroundTrackView;
 @property (nonatomic, readonly, strong) UIImageView *valueTrackView;
 @property (nonatomic, readonly, strong) UIImageView *lowThumbView;

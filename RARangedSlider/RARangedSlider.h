@@ -11,11 +11,11 @@
 
 @interface RARangedSlider : UIControl
 
-@property (nonatomic, readonly, assign) float minValue;
-@property (nonatomic, readonly, assign) float maxValue;
+@property (nonatomic, readwrite, assign) float minValue;
+@property (nonatomic, readwrite, assign) float maxValue;
 
-@property (nonatomic, readonly, assign) float lowValue;
-@property (nonatomic, readonly, assign) float highValue;
+@property (nonatomic, readwrite, assign) float lowValue;
+@property (nonatomic, readwrite, assign) float highValue;
 
 - (void) setLowValue:(float)lowValue highValue:(float)highValue animated:(BOOL)animate completion:(void(^)(void))completion;
 
